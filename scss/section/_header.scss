@@ -1,0 +1,50 @@
+.header {
+}
+.header-nav {
+    padding: 30px 0;
+    background-color: var(--col-b);
+    // .header-nav__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .header-nav__logo
+
+    &__logo p {
+        font-size: 32px;
+        text-transform: uppercase;
+        color: var(--col-g);
+        font-weight: 700;
+    }
+
+    // .header-nav__list
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    // .header-nav__item
+
+    &__item {
+    }
+
+    // .header-nav__link
+
+    &__link {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--col-w);
+    }
+    &__link:hover {
+        color: var(--col-g);
+    }
+    &__active {
+        color: var(--col-g);
+    }
+}

@@ -1,0 +1,20 @@
+[class*="__container"] {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+p {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+.particles {
+    background-color: var(--col-b);
+}
+:root {
+    --col-b: #000;
+    --col-g: #08d665;
+    --col-gr: rgb(100, 100, 100);
+    --col-w: #fff;
+}
