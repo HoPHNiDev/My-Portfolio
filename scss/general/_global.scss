@@ -1,20 +1,103 @@
 [class*="__container"] {
-    max-width: 1140px;
-    padding: 0 15px;
+    max-width: 100%;
+    padding: 0 50px;
     margin: 0 auto;
 }
-p {
-    font-family: "Poppins", sans-serif;
+@media (max-width: 1240px) {
+    [class*="__container"] {
+        padding: 0 15px;
+    }
+}
+[class*="__title"] {
+    font-size: 4.5rem;
+    line-height: 4.6875rem;
+    color: var(--col-desc-s);
+}
+[class*="__text"] {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    color: var(--col-desc);
 }
 body {
-    font-family: "Poppins", sans-serif;
-}
-.particles {
-    background-color: var(--col-b);
+    font-family: "Helvetica Now Display", sans-serif;
 }
 :root {
     --col-b: #000;
-    --col-g: #08d665;
-    --col-gr: rgb(100, 100, 100);
     --col-w: #fff;
+
+    --col-g: #08d665;
+    --col-gr: rgb(150, 150, 150);
+    --col-n-w: #fff;
+    --col-n-b: #000;
+    --col-bl: rgb(40, 69, 133);
+    --col-gray: rgb(36, 36, 36);
+    --col-gray-alpha: rgba(100, 100, 100, 0.5);
+    --col-desc: rgb(230, 230, 230);
+    --col-desc-s: rgb(0, 152, 253);
+}
+.theme {
+    position: fixed;
+    z-index: 4;
+    bottom: 20px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--col-w);
+    border-radius: 40px;
+    border: none;
+    transition: width 0.4s;
+    &:hover {
+        width: 80px;
+        transition: width 0.4s;
+    }
+    &__status {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--col-b);
+        display: block;
+        color: var(--col-w);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20;
+        font-weight: 700;
+    }
+    &__name {
+        position: absolute;
+        left: 40px;
+        font-size: 15px;
+        top: 12.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--col-b);
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+    &:hover &__name {
+        opacity: 1;
+        transition: opacity 0.4s;
+    }
+}
+.scroll-top {
+    position: fixed;
+    z-index: 4;
+    bottom: 20px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--col-gray-alpha);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 1240px) {
+    .contact-link,
+    .scroll-top {
+        display: none;
+    }
 }

@@ -1,3 +1,33 @@
+/***************************************
+========================================
+
+	Author Name   : Shokhjahon Khamraev
+	
+****************************************
+=======================================/
+
+
+/* ----------------------------------------------------------------
+
+ ==> Table Of Content
+
+	01. Normalize
+	02. Header
+	03. Banner
+	04. About
+	05. Service
+	06. Portfolio 
+	07. Resume
+	08. Testimonial
+	09. Blog
+	10. Contact
+	11. Footer
+ 
+
+---------------------------------------------------------------- */
+/* ==========================================================================
+01. Normilize CSS Area Start
+========================================================================== */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -341,6 +371,12 @@ template {
   display: none;
 }
 
+/* ==========================================================================
+01. Normilize CSS Area End
+========================================================================== */
+/* ==========================================================================
+02. Reset CSS Area Start
+========================================================================== */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -368,37 +404,193 @@ a {
   display: inline-block;
 }
 
+/* ==========================================================================
+02. Reset CSS Area End
+========================================================================== */
+/* ==========================================================================
+03. Global CSS Area Start
+========================================================================== */
 [class*="__container"] {
-  max-width: 1140px;
-  padding: 0 15px;
+  max-width: 100%;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
-p {
-  font-family: "Poppins", sans-serif;
+@media (max-width: 1240px) {
+  [class*="__container"] {
+    padding: 0 15px;
+  }
+}
+
+[class*="__title"] {
+  font-size: 4.5rem;
+  line-height: 4.6875rem;
+  color: var(--col-desc-s);
+}
+
+[class*="__text"] {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  color: var(--col-desc);
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-}
-
-.particles {
-  background-color: var(--col-b);
+  font-family: "Helvetica Now Display", sans-serif;
 }
 
 :root {
   --col-b: #000;
-  --col-g: #08d665;
-  --col-gr: rgb(100, 100, 100);
   --col-w: #fff;
+  --col-g: #08d665;
+  --col-gr: rgb(150, 150, 150);
+  --col-n-w: #fff;
+  --col-n-b: #000;
+  --col-bl: rgb(40, 69, 133);
+  --col-gray: rgb(36, 36, 36);
+  --col-gray-alpha: rgba(100, 100, 100, 0.5);
+  --col-desc: rgb(230, 230, 230);
+  --col-desc-s: rgb(0, 152, 253);
 }
 
-.header-nav {
-  padding: 30px 0;
+.theme {
+  position: fixed;
+  z-index: 4;
+  bottom: 20px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--col-w);
+  border-radius: 40px;
+  border: none;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+}
+
+.theme:hover {
+  width: 80px;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+}
+
+.theme__status {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   background-color: var(--col-b);
+  display: block;
+  color: var(--col-w);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20;
+  font-weight: 700;
 }
 
-.header-nav__container {
+.theme__name {
+  position: absolute;
+  left: 40px;
+  font-size: 15px;
+  top: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--col-b);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.theme:hover .theme__name {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.scroll-top {
+  position: fixed;
+  z-index: 4;
+  bottom: 20px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--col-gray-alpha);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1240px) {
+  .contact-link,
+  .scroll-top {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+03. Global CSS Area End
+========================================================================== */
+/* ==========================================================================
+04. Fonts CSS Area Start
+========================================================================== */
+@font-face {
+  font-family: Helvetica Now Display;
+  src: url(../../fonts/HelveticaNowDisplay/HelveticaNowDisplay-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Helvetica Now Display;
+  src: url(../../fonts/HelveticaNowDisplay/HelveticaNowDisplay-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Helvetica Now Display;
+  src: url(../../fonts/HelveticaNowDisplay/HelveticaNowDisplay-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Helvetica Now Display;
+  src: url(../../fonts/HelveticaNowDisplay/HelveticaNowDisplay-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Helvetica Now Display;
+  src: url(../../fonts/HelveticaNowDisplay/HelveticaNowDisplay-Regular.ttf);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+04. Fonts CSS Area End
+========================================================================== */
+/* ==========================================================================
+05. Header CSS Area Start
+========================================================================== */
+.header {
+  padding: 30px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.header__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,58 +602,44 @@ body {
           align-items: center;
 }
 
-.header-nav__logo p {
-  font-size: 32px;
-  text-transform: uppercase;
-  color: var(--col-g);
-  font-weight: 700;
+.header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.header-nav__list {
+.header .logo__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 4px solid var(--col-w);
+  color: var(--col-w);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  font-size: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  font-weight: 800;
 }
 
-.header-nav__link {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 15px;
-  color: var(--col-w);
-}
-
-.header-nav__link:hover {
-  color: var(--col-g);
-}
-
-.header-nav__active {
-  color: var(--col-g);
-}
-
-.home {
-  background-color: var(--col-b);
-  position: relative;
-  max-height: 100vh;
-  height: calc(100vh - 96.797px);
-  overflow: hidden;
-}
-
-.home__body {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.home__content {
+.header .logo__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -469,39 +647,399 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 100%;
-  gap: 50px;
+  gap: 5px;
 }
 
-.home__title {
-  font-size: 45px;
-  color: var(--col-g);
+.header .logo__name {
+  font-family: "Helvetica Now Display", sans-serif;
+  color: var(--col-w);
+  font-size: 20px;
+  font-weight: 800;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-.home__list {
+.header .logo__skills {
+  font-family: "Helvetica Now Display", sans-serif;
+  color: var(--col-w);
+  letter-spacing: 8.6px;
+  text-transform: uppercase;
+  font-size: 10px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.header__button_active .logo__skills {
+  color: var(--col-n-w);
+}
+
+.header__button_active .logo__icon {
+  border-color: var(--col-n-w);
+  color: var(--col-n-w);
+}
+
+.header__button_active .logo__name {
+  color: var(--col-n-w);
+}
+
+.header__logo:hover .logo__skills {
+  color: var(--col-gr);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.header__logo:hover .logo__name {
+  color: var(--col-gr);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.header__logo:hover .logo__icon {
+  color: var(--col-gr);
+  border-color: var(--col-gr);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.header__button {
+  background-color: transparent;
+  border: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 24px;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.home__item {
-  color: var(--col-w);
-  font-weight: 600;
-  font-size: 16px;
+.header__button-text {
+  color: transparent;
+  font-size: 18px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
 }
 
-.home__link:hover {
+.header__button:hover .header__burger::before {
+  background-color: var(--col-gr);
+  top: -12px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header__button:hover .header__burger::after {
+  background-color: var(--col-gr);
+  bottom: -12px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header__button:hover .header__burger {
+  background-color: var(--col-gr);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header__button:hover .header__button-text {
   color: var(--col-gr);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.header__burger {
+  width: 25px;
+  height: 3px;
+  background-color: var(--col-w);
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__burger::before, .header__burger::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 25px;
+  height: 3px;
+  display: block;
+  background-color: var(--col-w);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header__burger::before {
+  top: -8px;
+}
+
+.header__burger::after {
+  bottom: -8px;
+}
+
+.header__button_active .header__burger::after {
+  background-color: var(--col-n-w);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 0;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.header__button_active:hover .header__burger::after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  bottom: 0;
+}
+
+.header__button_active .header__burger::before {
+  background-color: var(--col-n-w);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 0;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.header__button_active:hover .header__burger::before {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  top: 0;
+}
+
+.header__button_active .header__burger {
+  background-color: transparent;
+}
+
+.header__button_active:hover .header__burger {
+  background-color: transparent;
+}
+
+.nav {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: -100%;
+  z-index: 3;
+  background-color: var(--col-bl);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: top 1s ease;
+  transition: top 1s ease;
+}
+
+.nav_active {
+  top: 0;
+  -webkit-transition: top 1s ease;
+  transition: top 1s ease;
+}
+
+.nav_disable {
+  top: 100%;
+  -webkit-transition: top 1s ease;
+  transition: top 1s ease;
+}
+
+.nav__text {
+  color: var(--col-gr);
+  font-size: 18px;
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav__link {
+  font-weight: 600;
+  font-size: 50px;
+  color: var(--col-gr);
+  position: relative;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: var(--col-n-w);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.nav__link_active {
+  position: relative;
+  color: var(--col-n-w);
+}
+
+.nav__link_active::before, .nav__link_active::after {
+  content: "";
+  background-color: var(--col-n-w);
+  width: 80px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  top: 22.5px;
+  cursor: default;
+}
+
+.nav__link_active::before {
+  left: -100px;
+}
+
+.nav__link_active::after {
+  right: -100px;
+}
+
+/* ==========================================================================
+05. Header CSS Area End
+========================================================================== */
+/* ==========================================================================
+06. Home Section CSS Area Start
+========================================================================== */
+.home {
+  background-color: var(--col-b);
+  position: relative;
+  max-height: 1000px;
+}
+
+.home__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 54%;
+          flex: 1 1 54%;
+  margin-top: 220px;
+}
+
+.home__title {
+  color: var(--col-desc-s);
+}
+
+.home__title span {
+  font-weight: 800;
+}
+
+.home__text {
+  margin-top: 30px;
+}
+
+.home__links {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+
+.home__links span {
+  color: var(--col-desc);
 }
 
 .home__link {
-  margin-left: 5px;
-  color: var(--col-w);
+  color: var(--col-desc-s);
+  font-size: 20px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
+
+.home__link:hover {
+  color: var(--col-bl);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.home__image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 46%;
+          flex: 1 1 46%;
+}
+
+.home__image img {
+  width: 100%;
+}
+
+/* ==========================================================================
+06. Home Section CSS Area Start
+========================================================================== */
+/* ==========================================================================
+07. Footer CSS Area Start
+========================================================================== */
+.footer {
+  background-color: var(--col-b);
+  padding: 30px;
+  border-top: 2px solid var(--col-gray);
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__text a {
+  color: var(--col-g);
+}
+
+.footer__text {
+  color: var(--col-w);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.footer__text img {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+/* ==========================================================================
+07. Foooter CSS Area Start
+========================================================================== */

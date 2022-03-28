@@ -13,60 +13,79 @@
 
     <div class="wrapper">
 
-        <header class="header">
-            <nav class="header-nav">
-                <div class="header-nav__container">
-                    <div class="header-nav__logo">
-                        <p>HoPHNi</p>
-                    </div>
-                    <ul class="header-nav__list">
-                        <li class="header-nav__item"><a href="#" class="header-nav__link header-nav__active">Главная</a>
-                        </li>
-                        <li class="header-nav__item"><a href="/projects/Appello/" class="header-nav__link">Appello</a>
-                        </li>
-                        <li class="header-nav__item"><a href="/projects/Clerksy/" class="header-nav__link">Clerksy</a>
-                        </li>
-                        <li class="header-nav__item"><a href="/projects/Vue-Cinema/"
-                                class="header-nav__link">VueCinema</a></li>
-                    </ul>
+        <header class="header" id="header">
+            <div class="header__container">
+                <div class="header__body">
+                    <a href="#" class="header__logo logo">
+                        <span class="logo__icon">H</span>
+                        <div class="logo__description">
+                            <p class="logo__name">Xamraev Shoxjahon</p>
+                            <p class="logo__skills">Web-Developer</p>
+                        </div>
+                    </a>
+
+                    <button class="header__button" id="header__button">
+                        <p class="header__button-text" id="header__button-text">Меню</p>
+                        <span class="header__burger"></span>
+                    </button>
                 </div>
-            </nav>
+            </div>
         </header>
 
+        <nav class="nav" id="nav">
+            <p class="nav__text">Меню</p>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link nav__link_active">Главная</a>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Обо мне</a>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Портфолио</a>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
         <main class="main">
-            <div class="home" id="home">
-                <div id="particles-js">
-                    <canvas class="particles-js-canvas-el"></canvas>
-                </div>
-                <div class="home__body">
-                    <div class="home__container">
+            <section class="home" id="home">
+                <div class="home__container">
+                    <div class="home__body">
                         <div class="home__content">
-                            <h1 class="home__title">Сайт находится в стадии разработки...</h1>
-                            <ul class="home__list">
-                                <li class="home__item">Телефон:<a href="tel:+998903310390"
-                                        class="home__link">+998903310390</a>
-                                </li>
-                                <li class="home__item">Почта:<a href="mailto:admin@hophni.ga"
-                                        class="home__link">admin@hophni.ga</a></li>
-                                <li class="home__item">Телеграм:<a href="https://t.me/HoPHNi"
-                                        class="home__link">@HoPHNi</a>
-                                </li>
-                            </ul>
+                            <h1 class="home__title">Привет, меня зовут <span>Шохжахон</span></h1>
+                            <p class="home__text">Я являюсь <span>Веб-разработчиком</span> из Узбекистана, Ташкент.</p>
+                            <div class="home__links">
+                                <a href="#" class="home__link">Просмотреть проэкты</a>
+                                <span>или</span>
+                                <a href="#" class="home__link">Прочитать обо мне</a>
+                            </div>
+                        </div>
+                        <div class="home__image">
+                            <img src="img/main/image.png" alt="">
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
 
         <footer class="footer">
-
+            <div class="footer__content">
+                <p class="footer__text">Made with
+                    <img
+                        src="data:image/png;base64,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" />
+                    by <a href="#">HoPHNi</a> in Uzbekistan, Tashkent.
+                </p>
+            </div>
         </footer>
-
+        <button class="theme" id="theme"><span class="theme__status" id="theme__status">D</span><span
+                class="theme__name" id="theme__name">ark</span></button>
+        <a href="#" class="scroll-top">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" space="preserve">
+                <path fill="#ffffff" d="M18.008,7.667L16.606,9,11,3.627V20H9V3.627L3.392,9l-1.4-1.336L10-.012Z"></path>
+            </svg>
+        </a>
     </div>
 
-    <script src="js/particles.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/app.js"></script>
 </body>
 
 </html>

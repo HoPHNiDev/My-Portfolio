@@ -1,0 +1,29 @@
+.footer {
+    background-color: var(--col-b);
+    padding: 30px;
+    border-top: 2px solid var(--col-gray);
+    // .footer__content
+
+    &__content {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__text a {
+        color: var(--col-g);
+    }
+    // .footer__text
+
+    &__text {
+        color: var(--col-w);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__text img {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+    }
+}
